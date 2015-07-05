@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>login html form</title>
+<script>
+function submitFunction()
+{
+	var x=document.forms["login"]["username"].value;
+	var y=document.forms["login"]["pass"].value;
+	if(x==null||x==""||y==null||y=="")
+	{
+		alert("wrong info");
+	}
+	else{
+		if(x=="j")
+		{
+			if(y=="s")
+			{
+				alert("login succeessful");
+				 Newsite= open("http://www.facebook.com","newsite");
+			}
+			else
+			{
+				alert("pwd do not match");
+				
+			}
+		}
+		else 
+			{
+				alert("username do not match");
+				
+			}
+		}
+}
+</script>
+<style type="text/css">
+span{color:#F00;}
+fieldset{background-image:url(file:///C|/Users/Joshua%20Salema/Desktop/1410435078239.jpg);}
+label{ border:thick;position:relative; line-height:2;}
+input{
+	position: absolute;
+	margin-left: 20px;
+	width: 12em;
+	left: 80px;
+}
+</style> 
+
+</head>
+
+<body>
+<h1>login page</h1>
+<form name="login" onSubmit="submitFunction()">
+<fieldset>
+<legend> login form </legend>
+<label><span>*</span>username:<input type="text" name="username"></label><br/>
+<label><span>*</span>password:<input type="password" name="pass"></label><br/>
+<input type="submit" value="Submit" >
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1448543175452734',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</fieldset>
+
+</form>
+
+
+</body>
+</html>
